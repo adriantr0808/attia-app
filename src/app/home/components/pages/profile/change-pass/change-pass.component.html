@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+     
+
+ 
+<div id="f1">
+    <button class="btn mx-5" id="btn-volver" type="button" routerLink="..">
+        <i class="fas fa-chevron-circle-left"></i>
+    </button>
+</div>
+<div class="container  ">
+    <div class="box p-4 mb-2">
+        <h2 class="me-auto">Cambiar Contraseña</h2>
+        <form class=" mt-4 bg-light p-4 text-center " [formGroup]="changeForm"
+        (ngSubmit)="postdata(changeForm)">
+            <div class="d-flex flex-column">
+                <label ><span>Contraseña Actual </span><input type="password"
+                        placeholder="Introducir contraseña actual" name="passact" formControlName="passact"></label>
+                <label><span>Nueva Contraseña</span><input type="password"
+                        placeholder="Introducir nueva contraseña" name="passnew" formControlName="passnew"></label>
+                <div class="mx-auto mt-3" id="alertBox">
+               
+                </div>
+                <button type="submit" class="btn btn-custom mt-4 mx-auto" id="confirm" >
+                    Confimar <span>Cambio</span>
+                </button>
+                
+            </div>
+         
+        </form>
+    </div>
+</div>

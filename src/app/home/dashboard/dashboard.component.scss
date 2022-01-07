@@ -1,0 +1,34 @@
+* {
+    font-family: "Play", sans-serif;
+}
+
+h1,h2 {
+    color: #05314f;
+    font-weight: 500;
+}
+h1 {
+    font-size: 38px;
+}   
+
+h2{
+    border-bottom: 2px solid #05314f;
+    padding-bottom: 0.6rem;
+}
+
+.box{
+    padding: 1.5rem;
+    text-align: justify;
+    background-color: rgba(226, 224, 114, 0.6);
+    border: 3px solid #05314f;
+    border-radius: 1rem;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+@media (max-width: 767px) {
+    #img-logo {
+        display: none;
+    }
+    h1 {
+        display: none;
+    }
+  
+}

@@ -1,0 +1,81 @@
+
+
+#blogo {
+    height: 100%;
+}
+#appVersion{
+    font-size: 0.775rem;
+    font-family: 'Play', sans-serif;
+    color:  #05314F;
+    font-weight: bold;
+    span {
+        a {
+
+        }
+    }
+}
+
+#form-div {
+    font-family: 'Play', sans-serif;
+    background-color: rgba(226, 224, 114, 0.8);
+    form {
+        &>* {
+            margin-bottom: 1.25rem;
+        }
+
+        &>label {
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+
+        &>input {
+            border-radius: 50px;
+            width: 320px;
+            height: 53px;
+            border: 1px solid black;
+            outline:none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        input::placeholder {
+            font-size: 18px;
+        }
+    
+        .btn-primary-custom{
+            color: white;
+            background-color: #05314F;
+            width: 255px;
+            border-radius: 50px;
+            font-size: 1.365rem;
+            text-align: center;
+            &:hover {
+                background-color: #0E1428;
+                color: white;
+                
+            }
+        }
+        
+        .form-check {
+            font-size: 1.365em;
+            font-weight: 400;
+        }
+    }
+   
+}
+
+@media screen and (max-width:375px){
+    #form-div {
+        form {
+            &>input {
+                width: 100%;
+            }
+        }
+    }
+  #appVersion{
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+

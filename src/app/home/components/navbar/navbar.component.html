@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <nav class="row " >
+        <div class="bg-light col-md-4">
+            <div class="d-flex align-items-center position-relative">
+
+                <img src="{{profile_img}}" width="80" height="80"
+                    class=" ms-3 mt-2 mb-2 rounded-circle" id="imgPerfil">
+                <div id="perfil" class="m-2">
+                    <div id="sesion"> Sesión iniciada como:</div>
+                    <div id="textonombre" class="mt-0 text-uppercase">{{name}}</div>
+                </div>
+                <div class="position-absolute  top-0 end-0">
+                    <a href="" class="icon-navigation" [routerLink]="['/dashboard/profile']">
+                        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.38 10.175L22.149 9.907C21.921 9.056 21.587 8.252 21.157 7.506L22.544 5.743C22.756 5.472 22.732 5.053 22.487 4.809L20.188 2.509C19.946 2.266 19.526 2.24 19.254 2.452L17.488 3.841C16.745 3.411 15.941 3.077 15.092 2.851L14.825 0.62C14.784 0.279 14.469 0 14.125 0H10.873C10.529 0 10.214 0.279 10.174 0.62L9.906 2.851C9.056 3.078 8.251 3.413 7.508 3.842L5.743 2.455C5.473 2.243 5.053 2.268 4.81 2.511L2.51 4.812C2.268 5.054 2.243 5.474 2.456 5.746L3.842 7.51C3.412 8.254 3.078 9.059 2.851 9.91L0.621 10.177C0.28 10.217 0 10.532 0 10.877V14.129C0 14.473 0.279 14.786 0.621 14.828L2.852 15.096C3.08 15.944 3.413 16.748 3.843 17.492L2.457 19.258C2.246 19.529 2.27 19.948 2.514 20.192L4.81 22.493C5.053 22.735 5.473 22.762 5.743 22.55L7.509 21.16C8.253 21.59 9.057 21.925 9.907 22.151L10.175 24.381C10.216 24.723 10.53 25.001 10.874 25.001H14.126C14.471 25.001 14.785 24.723 14.825 24.381L15.093 22.151C15.944 21.923 16.748 21.589 17.491 21.16L19.257 22.547C19.528 22.759 19.947 22.734 20.19 22.491L22.489 20.19C22.733 19.948 22.758 19.528 22.545 19.255L21.157 17.491C21.588 16.747 21.921 15.943 22.149 15.094L24.379 14.826C24.721 14.785 25 14.473 25 14.127V10.875C25.001 10.529 24.723 10.216 24.38 10.175ZM12.501 18.75C9.049 18.75 6.251 15.952 6.251 12.5C6.251 9.048 9.049 6.25 12.501 6.25C15.953 6.25 18.751 9.048 18.751 12.5C18.751 15.952 15.954 18.75 12.501 18.75Z" />
+                        </svg>
+                    </a>
+
+                    <a class=" ms-2 icon-navigation" (click)="logout()" href="">
+                        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M15.6248 13.5418C15.0488 13.5418 14.5832 14.0085 14.5832 14.5834V18.7501C14.5832 19.324 14.1165 19.7917 13.5415 19.7917H10.4165V4.16687C10.4165 3.27729 9.84983 2.48251 8.99782 2.18668L8.68941 2.08349H13.5415C14.1165 2.08349 14.5832 2.55117 14.5832 3.12528V6.25025C14.5832 6.82512 15.0488 7.29184 15.6248 7.29184C16.2008 7.29184 16.6664 6.82512 16.6664 6.25025V3.12528C16.6664 1.40238 15.2644 0.000305176 13.5415 0.000305176H2.34373C2.30405 0.000305176 2.27087 0.0180434 2.23234 0.0231931C2.18217 0.018997 2.1343 0.000305176 2.08338 0.000305176C0.9344 0.000305176 0 0.934516 0 2.08349V20.8333C0 21.7229 0.566667 22.5177 1.41867 22.8135L7.68749 24.9032C7.89996 24.9688 8.1113 25.0001 8.33331 25.0001C9.48228 25.0001 10.4165 24.0657 10.4165 22.9167V21.8751H13.5415C15.2644 21.8751 16.6664 20.473 16.6664 18.7501V14.5834C16.6664 14.0085 16.2008 13.5418 15.6248 13.5418Z" />
+                                <path
+                                    d="M24.6946 9.68039L20.5279 5.51383C20.2301 5.21591 19.7821 5.12626 19.3926 5.28762C19.0041 5.44917 18.7498 5.8293 18.7498 6.25025V9.37522H14.5833C14.0082 9.37522 13.5415 9.84175 13.5415 10.4168C13.5415 10.9919 14.0082 11.4584 14.5833 11.4584H18.7498V14.5834C18.7498 15.0043 19.0041 15.3844 19.3926 15.546C19.7821 15.7074 20.2301 15.6177 20.5279 15.32L24.6946 11.1532C25.1018 10.746 25.1018 10.0876 24.6946 9.68039Z" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="25" height="25" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+
+                </div>
+                <div class="boton p-2 position-absolute end-0 mt-3" (click)="toogle()">
+                    <button type="button" class="btn btn-warning  ms-2 "><svg width="20" height="20" aria-hidden="true" focusable="false"
+                            data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                            </path>
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-8 prin" id="navbarNavAltMarkup" id="nav1">
+            <ul class="list-group list-group-horizontal list-unstyled h-100 d-flex justify-content-around align-items-center"
+                id="menu">
+                <li>
+                    <a [routerLink]="['/dashboard']">Inicio</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/dashboard/empleados']">Empleados</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/dashboard/ganancias']">Ganancias</a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/dashboard/gastos']">Gastos</a>
+                </li>
+                <li>
+                    <a href="#">Resumen</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-8 prin" id="nav2">
+            <ul class="list-group list-group-flush list-unstyled h-100 d-flex justify-content-around align-items-center"
+                id="menu">
+                <li>
+                    <a [routerLink]="['/dashboard']">Inicio</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/dashboard/empleados']">Empleados</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/dashboard/ganancias']">Ganancias</a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/gastos']">Gastos</a>
+                </li>
+                <li>
+                    <a href="#">Resumen</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </nav>
+</div>
